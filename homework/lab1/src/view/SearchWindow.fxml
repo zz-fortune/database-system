@@ -6,56 +6,47 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="1200.0" prefWidth="1800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SearchWindowController">
    <children>
-      <Pane layoutX="6.0" prefHeight="1200.0" prefWidth="1800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="6.0" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane prefHeight="350.0" prefWidth="1800.0">
+            <Pane prefHeight="175.0" prefWidth="900.0">
                <children>
-                  <CheckBox layoutX="25.0" layoutY="28.0" mnemonicParsing="false" text="学号" />
-                  <CheckBox layoutX="25.0" layoutY="107.0" mnemonicParsing="false" text="姓名" />
-                  <CheckBox layoutX="750.0" layoutY="28.0" mnemonicParsing="false" text="班级" />
-                  <CheckBox layoutX="750.0" layoutY="107.0" mnemonicParsing="false" text="年级" />
-                  <CheckBox layoutX="25.0" layoutY="184.0" mnemonicParsing="false" text="性别" />
-                  <CheckBox layoutX="25.0" layoutY="262.0" mnemonicParsing="false" text="地址" />
-                  <CheckBox layoutX="750.0" layoutY="184.0" mnemonicParsing="false" text="年龄" />
-                  <Button layoutX="1461.0" layoutY="49.0" mnemonicParsing="false" prefHeight="248.0" prefWidth="179.0" text="查询" />
-                  <TextField layoutX="190.0" layoutY="18.0" prefHeight="45.0" prefWidth="380.0" />
-                  <TextField layoutX="190.0" layoutY="97.0" prefHeight="45.0" prefWidth="380.0" />
-                  <TextField layoutX="190.0" layoutY="174.0" prefHeight="45.0" prefWidth="380.0" />
-                  <TextField layoutX="190.0" layoutY="252.0" prefHeight="45.0" prefWidth="380.0" />
-                  <TextField layoutX="911.0" layoutY="18.0" prefHeight="45.0" prefWidth="380.0" />
-                  <TextField layoutX="911.0" layoutY="97.0" prefHeight="45.0" prefWidth="380.0" />
-                  <TextField layoutX="911.0" layoutY="174.0" prefHeight="45.0" prefWidth="150.0" />
-                  <Text layoutX="1091.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="~" />
-                  <TextField layoutX="1141.0" layoutY="175.0" prefHeight="65.0" prefWidth="150.0" />
+                  <CheckBox fx:id="selectStudentID" layoutX="30.0" layoutY="18.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="学号" />
+                  <CheckBox fx:id="selectName" layoutX="30.0" layoutY="54.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="姓名" />
+                  <CheckBox fx:id="selectClassNum" layoutX="434.0" layoutY="18.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="班级" />
+                  <CheckBox fx:id="selectDept" layoutX="434.0" layoutY="54.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="年级" />
+                  <CheckBox fx:id="selectSex" layoutX="30.0" layoutY="96.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="性别" />
+                  <CheckBox fx:id="selectAdress" layoutX="30.0" layoutY="135.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="地址" />
+                  <CheckBox fx:id="selectAge" layoutX="434.0" layoutY="96.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="年龄" />
+                  <TextField fx:id="inputStudentID" layoutX="100.0" layoutY="18.0" minHeight="20.0" minWidth="20.0" prefHeight="25.0" prefWidth="190.0" />
+                  <TextField fx:id="inputName" layoutX="100.0" layoutY="56.0" minHeight="20.0" minWidth="20.0" prefHeight="25.0" prefWidth="190.0" />
+                  <TextField fx:id="inputSex" layoutX="100.0" layoutY="96.0" minHeight="20.0" minWidth="20.0" prefHeight="25.0" prefWidth="190.0" />
+                  <TextField fx:id="inputAddress" layoutX="100.0" layoutY="135.0" minHeight="20.0" minWidth="20.0" prefHeight="25.0" prefWidth="190.0" />
+                  <TextField fx:id="inputClassNum" layoutX="502.0" layoutY="21.0" minHeight="20.0" minWidth="20.0" prefHeight="25.0" prefWidth="190.0" />
+                  <TextField fx:id="inputDept" layoutX="502.0" layoutY="56.0" minHeight="20.0" minWidth="20.0" prefHeight="25.0" prefWidth="190.0" />
+                  <TextField fx:id="inputAgeStart" layoutX="502.0" layoutY="99.0" minHeight="20.0" minWidth="20.0" prefHeight="25.0" prefWidth="75.0" />
+                  <Text layoutX="594.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="~" wrappingWidth="20.5224609375" />
+                  <TextField fx:id="inputAgeEnd" layoutX="617.0" layoutY="99.0" minHeight="20.0" minWidth="20.0" prefHeight="25.0" prefWidth="75.0" />
+                  <Button fx:id="searceButton" layoutX="748.0" layoutY="19.0" mnemonicParsing="false" onAction="#search" prefHeight="125.0" prefWidth="75.0" text="查询" />
                </children>
             </Pane>
-            <Pane layoutY="350.0" prefHeight="150.0" prefWidth="1800.0">
+            <Pane layoutY="175.0" prefHeight="75.0" prefWidth="900.0">
                <children>
-                  <TextArea editable="false" layoutX="30.0" prefHeight="150.0" prefWidth="1734.0" />
+                  <TextArea fx:id="cmdShowArea" editable="false" layoutX="15.0" prefHeight="75.0" prefWidth="867.0" />
                </children>
             </Pane>
-            <Pane layoutY="530.0" prefHeight="670.0" prefWidth="1800.0">
+            <Pane layoutY="260.0" prefHeight="340.0" prefWidth="900.0">
                <children>
-                  <TableView layoutX="-6.0" prefHeight="670.0" prefWidth="1800.0">
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                        <TableColumn prefWidth="75.0" text="Column X" />
-                        <TableColumn prefWidth="75.0" text="Column X" />
-                    </columns>
-                  </TableView>
-                  <TableView prefHeight="670.0" prefWidth="1800.0" tableMenuButtonVisible="true">
+                  <TableView fx:id="studentInfo" prefHeight="340.0" prefWidth="895.0" tableMenuButtonVisible="true">
                      <columns>
-                        <TableColumn prefWidth="300.0" text="学号" />
-                        <TableColumn prefWidth="300.0" text="姓名" />
-                        <TableColumn prefWidth="100.0" text="年龄" />
-                        <TableColumn prefWidth="100.0" text="性别" />
-                        <TableColumn prefWidth="100.0" text="年级" />
-                        <TableColumn prefWidth="100.0" text="班级" />
-                        <TableColumn prefWidth="800.0" text="地址" />
+                        <TableColumn fx:id="studentIDInfo" prefWidth="150.0" text="学号" />
+                        <TableColumn fx:id="nameInfo" prefWidth="150.0" text="姓名" />
+                        <TableColumn fx:id="ageInfo" prefWidth="50.0" text="年龄" />
+                        <TableColumn fx:id="sexInfo" prefWidth="50.0" text="性别" />
+                        <TableColumn fx:id="deptInfo" prefWidth="50.0" text="年级" />
+                        <TableColumn fx:id="classNumInfo" prefWidth="50.0" text="班级" />
+                        <TableColumn fx:id="addressInfo" prefWidth="400.0" text="地址" />
                      </columns>
                   </TableView>
                </children>
