@@ -13,15 +13,26 @@ import javafx.beans.property.StringProperty;
  *
  */
 public class Student {
+	//	这里全部使用 Property 类型的变量，是为了便于在javafx中使用
+	private final StringProperty studentID; //	学号
+	private final StringProperty name;  //	姓名
+	private final IntegerProperty age;	//	年龄
+	private final StringProperty sex;	//	性别
+	private final IntegerProperty department;	//	年级
+	private final IntegerProperty classNum;	//	班级
+	private final StringProperty address;	//	地址
 	
-	private final StringProperty studentID;
-	private final StringProperty name;
-	private final IntegerProperty age;
-	private final StringProperty sex;
-	private final IntegerProperty department;
-	private final IntegerProperty classNum;
-	private final StringProperty address;
-	
+	/**
+	 * 构造器
+	 * 
+	 * @param sid 学号
+	 * @param name 姓名
+	 * @param age 年龄
+	 * @param sex 性别
+	 * @param dept 年级
+	 * @param classNum 班级
+	 * @param address 地址
+	 */
 	public Student(String sid, String name, int age, String sex, int dept, int classNum, String address) {
 		this.studentID = new SimpleStringProperty(sid);
 		this.name = new SimpleStringProperty(name);
@@ -33,14 +44,29 @@ public class Student {
 		
 	}
 	
+	/**
+	 * 设置学号
+	 * 
+	 * @param sid 学号
+	 */
 	public void setStudentID(String sid) {
 		this.studentID.set(sid);
 	}
 	
+	/**
+	 * 获取学号
+	 * 
+	 * @return 学号
+	 */
 	public String getStudentID() {
 		return this.studentID.get();
 	}
 	
+	/**
+	 * 获取学号
+	 * 
+	 * @return 学号
+	 */
 	public StringProperty studentIDProperty() {
 		return this.studentID;
 	}
