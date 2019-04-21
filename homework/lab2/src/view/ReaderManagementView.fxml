@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReaderManagementController">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="900.0">
+         <children>
+            <Label layoutX="342.0" layoutY="23.0" text="读者信息管理">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="10.0" layoutY="110.0" prefHeight="500.0" prefWidth="900.0">
+         <children>
+            <ComboBox fx:id="type" layoutX="210.0" layoutY="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="80.0" />
+            <TextField fx:id="condition" layoutX="295.0" layoutY="30.0" minHeight="20.0" minWidth="20.0" prefHeight="30.0" prefWidth="300.0" />
+            <Button layoutX="600.0" layoutY="30.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#query" prefHeight="30.0" prefWidth="80.0" text="检索" />
+            <TableView fx:id="readers" editable="true" layoutX="20.0" layoutY="80.0" prefHeight="280.0" prefWidth="865.0" tableMenuButtonVisible="true">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="selected" text="勾选" />
+                  <TableColumn fx:id="ID" prefWidth="100.0" text="阅读证号" />
+                  <TableColumn fx:id="name" prefWidth="100.0" text="姓名" />
+                  <TableColumn fx:id="sex" text="性别" />
+                  <TableColumn fx:id="category" prefWidth="100.0" text="阅读证类型" />
+                  <TableColumn fx:id="maxvol" prefWidth="50.0" text="最大借阅数" />
+                  <TableColumn fx:id="borrowed" prefWidth="355.0" text="已借" />
+                  <TableColumn fx:id="date" prefWidth="75.0" text="办证日期" />
+                  <TableColumn fx:id="telephone" prefWidth="75.0" text="电话" />
+                  <TableColumn fx:id="address" prefWidth="75.0" text="地址" />
+                  <TableColumn fx:id="password" prefWidth="75.0" text="密码" />
+               </columns>
+            </TableView>
+            <Button layoutX="330.0" layoutY="390.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#insertSelected" prefHeight="30.0" prefWidth="100.0" text="插入" />
+            <Button layoutX="470.0" layoutY="390.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#deleteSelected" prefHeight="30.0" prefWidth="100.0" text="删除" />
+            <Button layoutX="610.0" layoutY="390.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#updateSelected" prefHeight="30.0" prefWidth="100.0" text="更新" />
+            <Button onAction="#emptyRaw" layoutX="190.0" layoutY="390.0" minHeight="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="获取新行" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

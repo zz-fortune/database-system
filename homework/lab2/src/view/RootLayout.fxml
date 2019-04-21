@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="功能">
+            <items>
+              <MenuItem fx:id="workerinfo" onAction="#loadWorkerInfoView" mnemonicParsing="false" text="个人信息" />
+            </items>
+            <items>
+              <MenuItem fx:id="readerinfo" onAction="#loadReaderInfoView" mnemonicParsing="false" text="个人信息" />
+            </items>
+            <items>
+              <MenuItem fx:id="bookinfo" onAction="#loadBookInfoView" mnemonicParsing="false" text="图书查询" />
+            </items>
+            <items>
+              <MenuItem fx:id="borrowreturn" onAction="#loadBorrowReturnView" mnemonicParsing="false" text="借阅与归还" />
+            </items>
+            <items>
+              <MenuItem fx:id="readermanagement" onAction="#loadReaderManagementView" mnemonicParsing="false" text="借阅者管理" />
+            </items>
+            <items>
+              <MenuItem fx:id="workermanagement" onAction="#loadWorkerManagementView" mnemonicParsing="false" text="员工管理" />
+            </items>
+            <items>
+              <MenuItem fx:id="bookinfomanagement" onAction="#loadBookInfoManagementView" mnemonicParsing="false" text="书库管理" />
+            </items>
+            <items>
+              <MenuItem fx:id="bookmanagement" onAction="#loadBookManagementView" mnemonicParsing="false" text="书目管理" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="窗口">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="帮助">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   
+</BorderPane>

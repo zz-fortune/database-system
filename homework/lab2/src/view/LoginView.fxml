@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginViewController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="400.0">
+         <children>
+            <Label alignment="CENTER" layoutX="100.0" layoutY="10.0" minHeight="20.0" minWidth="20.0" prefHeight="30.0" prefWidth="200.0" text="欢迎使用图书管理系统" textAlignment="CENTER" />
+         </children>
+      </Pane>
+      <Pane layoutY="50.0" minHeight="20.0" minWidth="20.0" prefHeight="100.0" prefWidth="400.0">
+         <children>
+            <Label layoutX="70.0" layoutY="15.0" minHeight="20.0" minWidth="20.0" prefHeight="30.0" prefWidth="50.0" text="用户名" />
+            <Label layoutX="70.0" layoutY="55.0" minHeight="20.0" minWidth="20.0" prefHeight="30.0" prefWidth="50.0" text="密   码" />
+            <TextField fx:id="username" layoutX="130.0" layoutY="15.0" minHeight="20.0" minWidth="20.0" prefHeight="30.0" prefWidth="200.0" />
+            <PasswordField fx:id="password" layoutX="130.0" layoutY="55.0" minHeight="20.0" minWidth="20.0" prefHeight="30.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="150.0" prefHeight="150.0" prefWidth="400.0">
+         <children>
+            <Button onAction="#readerLogin" layoutX="150.0" layoutY="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="读者登录" />
+            <Button onAction="#workLogin" layoutX="150.0" layoutY="60.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="工作人员登录" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BorrowReturnController">
+   <children>
+      <Pane prefHeight="150.0" prefWidth="900.0">
+         <children>
+            <Label layoutX="324.0" layoutY="49.0" text="图书借阅与归还">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="150.0" prefHeight="450.0" prefWidth="900.0">
+         <children>
+            <TextField fx:id="bookID" layoutX="450.0" layoutY="-1.0" minHeight="20.0" minWidth="20.0" prefHeight="30.0" prefWidth="200.0" promptText="输入图书编码..." />
+            <Button layoutX="655.0" layoutY="-1.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#query" prefHeight="30.0" prefWidth="80.0" text="检索" />
+            <TableView fx:id="bookpreview" editable="true" layoutX="20.0" layoutY="60.0" prefHeight="200.0" prefWidth="865.0" tableMenuButtonVisible="true">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="selected" prefWidth="75.0" text="勾选" />
+                  <TableColumn fx:id="ID" prefWidth="50.0" text="图书编码" />
+                  <TableColumn fx:id="isbn" text="ISBN" />
+                  <TableColumn fx:id="name" prefWidth="100.0" text="书名" />
+                  <TableColumn fx:id="author" prefWidth="100.0" text="作者" />
+                  <TableColumn fx:id="category" text="类别" />
+                  <TableColumn fx:id="press" prefWidth="100.0" text="出版社" />
+                  <TableColumn fx:id="intro" prefWidth="355.0" text="简介" />
+               </columns>
+            </TableView>
+            <Button layoutX="300.0" layoutY="300.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#borrowBook" prefHeight="30.0" prefWidth="100.0" text="借阅" />
+            <Button layoutX="500.0" layoutY="300.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#returnBook" prefHeight="30.0" prefWidth="100.0" text="归还" />
+            <TextField fx:id="readerID" layoutX="150.0" layoutY="-1.0" minHeight="20.0" prefHeight="30.0" prefWidth="200.0" promptText="输入阅读证号" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

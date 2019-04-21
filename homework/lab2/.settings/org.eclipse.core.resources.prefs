@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/controller/BookInfoController.java=UTF-8
+encoding//src/controller/BorrowReturnController.java=UTF-8
+encoding//src/controller/LibManageApp.java=UTF-8
+encoding//src/controller/LoginViewController.java=UTF-8
+encoding//src/controller/ReaderInfoController.java=UTF-8
+encoding//src/controller/ReaderManagementController.java=UTF-8
+encoding//src/model/AvailableBook.java=UTF-8
+encoding//src/model/ReaderInfo.java=UTF-8
+encoding//src/model/WorkerInfo.java=UTF-8

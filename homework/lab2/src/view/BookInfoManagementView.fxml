@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="900.0">
+         <children>
+            <Label layoutX="342.0" layoutY="23.0" text="书目信息管理">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="100.0" prefHeight="500.0" prefWidth="900.0">
+         <children>
+            <ComboBox layoutX="210.0" layoutY="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="80.0" />
+            <TextField layoutX="295.0" layoutY="30.0" minHeight="20.0" minWidth="20.0" prefHeight="30.0" prefWidth="300.0" />
+            <Button layoutX="600.0" layoutY="30.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="检索" />
+            <TableView editable="true" layoutX="20.0" layoutY="80.0" prefHeight="280.0" prefWidth="865.0" tableMenuButtonVisible="true">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn text="勾选" />
+                  <TableColumn prefWidth="100.0" text="ISBN" />
+                  <TableColumn prefWidth="100.0" text="书名" />
+                  <TableColumn text="登记日期" />
+                  <TableColumn prefWidth="100.0" text="借出次数" />
+                  <TableColumn prefWidth="50.0" text="是否在馆" />
+                  <TableColumn prefWidth="355.0" text="书架编号" />
+                  <TableColumn prefWidth="75.0" text="房间号" />
+                  <TableColumn prefWidth="75.0" text="所在书架层数" />
+                  <TableColumn prefWidth="75.0" text="备注" />
+               </columns>
+            </TableView>
+            <Button layoutX="250.0" layoutY="390.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="插入" />
+            <Button layoutX="400.0" layoutY="390.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="删除" />
+            <Button layoutX="550.0" layoutY="390.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="更新" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
