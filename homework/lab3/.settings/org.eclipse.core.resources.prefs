@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/index/BPlusTree.java=UTF-8
+encoding//src/index/IntraNode.java=UTF-8
+encoding//src/index/LeafNode.java=UTF-8
+encoding//src/index/Node.java=UTF-8
+encoding//src/sort/Block.java=UTF-8
+encoding//src/sort/Sorter.java=UTF-8
+encoding//src/util/Utils.java=UTF-8
